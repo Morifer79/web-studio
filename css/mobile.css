@@ -44,6 +44,9 @@ img{
 	align-items: center;
 	justify-content: space-between;
 }
+.section{
+	padding: 96px 0;
+}
 @media screen and (min-width: 480px){
 	.container{
 		width: 426px;
@@ -216,12 +219,13 @@ img{
 	padding: 112px 0;
 }
 .overlay{
-	max-width: 428px;
-	max-height: 432px;
+	max-width: 767px;
+	max-height: 436px;
 	margin: 0 auto;
 
 	background-color: var(--dark-overlay);
 	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile.jpg);
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
@@ -277,19 +281,8 @@ img{
 }
 /* *============================BODY SECTIONS=================================== */
 /* =================ADVANTAGES SECTION=============== */
-.advantages {
-	padding-bottom: 0;
-}
 .advantages-list{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 24px;
-
 	list-style: none;
-}
-.advantages-list>.item{
-	flex-basis: calc((100% - 72px) / 4);
-	min-width: 250px;
 }
 .title {
 	margin-bottom: 72px;
@@ -299,12 +292,80 @@ img{
 	text-align: center;
 	color: var(--dark);
 }
-.title-card {
+.advantages-item-title {
 	margin-bottom: 8px;
 
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 1.2;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.11;
 	letter-spacing: 0.02em;
 	color: var(--dark);
+	text-align: center;
+}
+.text-card{
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+.text-card:not(:last-child){
+	margin-bottom: 8px;
+}
+.advantages-list>.item:not(:last-child){
+	margin-bottom: 72px;
+}
+/* =======================TEAM SECTION================== */
+.team-section {
+	background-color: var(--light);
+}
+.team-list {
+	list-style: none;
+}
+.team-list>.item:not(:last-child){
+	margin-bottom: 72px;
+}
+.team-card{
+	background-color: var(--primary-clr);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+}
+.title-card{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	margin-bottom: 8px;
+}
+.info-card{
+	padding: 32px 16px;
+	text-align: center;
+}
+.social-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+
+	list-style: none;
+}
+.social-item{
+	flex-basis: calc((100% - 72px) / 4);
+	min-width: 38px;
+}
+.social-link{
+	display: block;
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+}
+.social-img{
+	width: 16px;
+	height: 16px;
+	margin: 12px;
+}
+.light-icon{
+	background-color: var(--primary-brand);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.light-icon:is(:hover,:focus){
+	background-color: var(--pressed-state);
 }
