@@ -128,6 +128,7 @@ img{
 	}
 	.subscribe-field{
 		width: 264px;
+		margin-bottom: 0;
 	}
 	.subscribe-form>.button{
 		display: inline-block;
