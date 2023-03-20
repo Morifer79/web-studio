@@ -13,15 +13,15 @@
 	<header class="header">
 		<div class="container wrapper">
 			<a href="./index.html" class="logo"><span class="logo-span">Web</span >Studio</a>
-			<button type="button" class="burger-button" data-modal-open>
+			<button type="button" class="burger-button" data-menu-open>
 				<svg width="32" height="32" aria-label="Mobile switcher">
 					<use class="burger-icon" href="./images/icons.svg#hamburger"></use>
 				</svg>
 			</button>
 		</div>
-		<div class="mobile-menu is-hidden" data-modal>
+		<div class="mobile-menu is-hidden" data-menu>
 			<div class="container mobile-container">
-				<button class="button-close" data-modal-close>
+				<button class="button-close" data-menu-close>
 					<svg class="btn-close"><use href="./images/sprite.svg#cross"></use></svg>
 				</button>
 				<ul class="nav-list">
@@ -72,9 +72,7 @@
 				<ul class="team-list">
 					<li class="item">
 						<div class="team-card">
-							<div class="thumb">
-								<img class="team-pic" srcset="./images/mark-guerrero-264.jpg 1x, ./images/mark-guerrero@2x-528.jpg 2x" src="./images/mark-guerrero-264.jpg" alt="Product Designer" width="264">
-							</div>
+							<img class="team-pic" srcset="./images/mark-guerrero-264.jpg 1x, ./images/mark-guerrero@2x-528.jpg 2x" src="./images/mark-guerrero-264.jpg" alt="Product Designer" width="264">
 							<div class="info-card">
 								<h3 class="title-card">Mark Guerrero</h3>
 								<p class="text-card">Product Designer</p>
@@ -105,7 +103,7 @@
 					</li>
 					<li class="item">
 						<div class="team-card">
-							<img class="team-pic" src="./images/tom-ford.jpg" alt="Frontend Developer" width="264">
+							<img class="team-pic" srcset="./images/tom-ford-264.jpg 1x, ./images/tom-ford@2x-528.jpg 2x" src="./images/tom-ford-264.jpg" alt="Frontend Developer" width="264">
 							<div class="info-card">
 								<h3 class="title-card">Tom Ford</h3>
 								<p class="text-card">Frontend Developer</p>
@@ -136,7 +134,7 @@
 					</li>
 					<li class="item">
 						<div class="team-card">
-							<img class="team-pic" src="./images/camila-garcia.jpg" alt="Marketing" width="264">
+							<img class="team-pic" srcset="./images/camila-garcia-264.jpg 1x, ./images/camila-garcia@2x-528.jpg 2x" src="./images/camila-garcia-264.jpg" alt="Marketing" width="264">
 							<div class="info-card">
 								<h3 class="title-card">Camila Garcia</h3>
 								<p class="text-card">Marketing</p>
@@ -167,7 +165,7 @@
 					</li>
 					<li class="item">
 						<div class="team-card">
-							<img class="team-pic" src="./images/daniel-wilson.jpg" alt="UI Designer" width="264">
+							<img class="team-pic" srcset="./images/daniel-wilson-264.jpg 1x, ./images/daniel-wilson@2x-528.jpg 2x" src="./images/daniel-wilson-264.jpg" alt="UI Designer" width="264">
 							<div class="info-card">
 								<h3 class="title-card">Daniel Wilson</h3>
 								<p class="text-card">UI Designer</p>
@@ -199,7 +197,7 @@
 				</ul>
 			</div>
 		</section>
-		<!-- <section class="customers section">
+		<section class="customers section">
 			<h2 class="title">Customers</h2>
 			<div class="container">
 				<ul class="customers-list">
@@ -235,10 +233,10 @@
 					</li>
 				</ul>
 			</div>
-		</section> -->
+		</section>
 	</main>
-	<!-- <footer class="footer">
-		<div class="container wrapper">
+	<footer class="footer section">
+		<div class="container">
 			<div class="advertising">
 				<a href="./index.html" class="logo logo-footer"><span class="logo-span">Web</span >Studio</a>
 				<p class="footer-text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
@@ -280,9 +278,8 @@
 				</form>
 			</div>
 		</div>
-	</footer> -->
-	<!----------------------------- Modal window-------------------------------------- -->
-	<!-- <div class="backdrop is-hidden" data-modal>
+	</footer>
+	<div class="backdrop is-hidden" data-modal>
 		<div class="modal">
 			<button class="button-close" data-modal-close>
 				<svg class="btn-close"><use href="./images/sprite.svg#cross"></use></svg>
@@ -316,7 +313,7 @@
 						</svg>
 					</span>
 				</label>
-				<label class="form-label">
+				<label class="form-label-area">
 					<span class="label-description">Comment</span>
 					<textarea class="form-input-area" name="user-message" placeholder="Text input">
 					</textarea>
@@ -331,8 +328,8 @@
 				<button class="button button-dark" type="submit">Send</button>
 			</form>
 		</div>
-	</div> -->
-	<!-- <script src="./js/mobile-menu.js"></script> -->
+	</div>
+	<script src="./js/mobile-menu.js"></script>
 	<script src="./js/modal.js"></script>
 </body>
 </html>
