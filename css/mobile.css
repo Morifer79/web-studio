@@ -29,6 +29,9 @@ body{
 	color: var(--text);
 	background-color: var(--primary-clr);
 }
+body.modal-open{
+	overflow: hidden;
+}
 img{
 	display: block;
 
@@ -45,59 +48,21 @@ img{
 	align-items: center;
 	justify-content: space-between;
 }
+/* !======================MIN WIDTH===================== */
 @media screen and (min-width: 480px){
 	.container{
-		width: 428px;
-	}
-	.overlay{
-		max-width: 428px;
-		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile-428.jpg);
-	}
-	@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-		.overlay{
-			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x-856.jpg);
-		}
-	}
-	.hero-title{
-		font-size: 36px;
-		line-height: 1.11;
-		margin: 0 auto 72px;
-		max-width: 320px;
-	}
-	.advertising{
-		max-width: 268px;
-		margin: 0 auto 72px;
-	}
-	.social-media{
-		margin: 0 auto 72px;
-		max-width: 208px;
-	}
-	.social-media>.footer-text,
-	.subscribe>.footer-text{
-		text-align: center;
-		margin-bottom: 16px;
-	}
-	.logo-footer{
-		text-align: center;
-	}
-	.subscribe-field{
-		width: 398px;
-		margin-bottom: 16px;
-	}
-	.subscribe-form>.button{
-		display: block;
-		margin: 0 auto;
+		width: 480px;
 	}
 }
 @media screen and (min-width: 768px){
 	.container{
-		width: 766px;
+		width: 768px;
 	}
 	.mobile-menu{
 		display: none;
 	}
 	.overlay{
-		max-width: 768px;
+		max-width: 1200px;
 		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet-768.jpg);
 	}
 	@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -108,20 +73,44 @@ img{
 	.hero-title{
 		font-size: 56px;
 		line-height: 1.07;
-		margin-bottom: 36px;
+		margin: 0 auto 36px;
 		max-width: 496px;
 	}
-	.advertising{
-		display: inline-block;
-		max-width: 264px;
-		margin: 0 24px 0 0;
+	.advantages-list{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 72px 24px;
 	}
-	.social-media{
-		display: inline-block;
+	.advantages-list>.item{
+		flex-basis: calc((100% - 72px) / 4);
+		min-width: 350px;
+	}
+	.advantages-item-title {
+		text-align: left;
+	}
+	.team-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 64px 24px;
+		justify-content: center;
+	}
+	.team-list>.item{
+		flex-basis: calc((100% - 72px) / 4);
+		min-width: 264px;
+	}
+	.footer>.container{
+		width: 552px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.advertising{
+		max-width: 264px;
+		margin: 0 24px 72px 0;
 	}
 	.social-media>.footer-text,
 	.subscribe>.footer-text{
 		text-align: left;
+		margin-bottom: 16px;
 	}
 	.logo-footer{
 		text-align: left;
@@ -131,7 +120,6 @@ img{
 		margin-bottom: 0;
 	}
 	.subscribe-form>.button{
-		display: inline-block;
 		margin-left: 24px;
 	}
 }
@@ -146,7 +134,7 @@ img{
 		padding: 188px 0;
 	}
 	.overlay{
-		max-width: 1440px;
+		max-width: 1600px;
 		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop-1440.jpg);
 	}
 	@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -166,9 +154,54 @@ img{
 		margin: 0 120px 0 0;
 	}
 }
-@media screen and (max-width: 479px){
-	.container{
-		width: 320px;
+/* !========================MAX WIDTH====================== */
+
+@media screen and (max-width: 767px){
+	.overlay{
+		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile-428.jpg);
+	}
+	@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+		.overlay{
+			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x-856.jpg);
+		}
+	}
+	.hero-title{
+		font-size: 36px;
+		line-height: 1.11;
+		margin: 0 auto 72px;
+		max-width: 320px;
+	}
+	.advantages-item-title {
+		text-align: center;
+	}
+	.advantages-list>.item:not(:last-child),
+	.team-list>.item:not(:last-child){
+		margin-bottom: 72px;
+	}
+	.advertising{
+		max-width: 268px;
+		margin: 0 auto 72px;
+	}
+	.social-media{
+		margin: 0 auto 72px;
+		max-width: 208px;
+	}
+		.social-media>.footer-text,
+		.subscribe>.footer-text{
+		text-align: center;
+		margin-bottom: 16px;
+	}
+	.logo-footer{
+		text-align: center;
+	}
+	.subscribe-field{
+		display: block;
+		width: 398px;
+		margin: 0 auto 16px;
+	}
+	.subscribe-form>.button{
+		display: block;
+		margin: 0 auto;
 	}
 }
 @media screen and (max-width: 1199px){
@@ -395,16 +428,11 @@ img{
 
 	letter-spacing: 0.02em;
 	color: var(--dark);
-	text-align: center;
 }
 .text-card{
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
-}
-.advantages-list>.item:not(:last-child),
-.team-list>.item:not(:last-child){
-	margin-bottom: 72px;
 }
 /* =======================TEAM SECTION================== */
 .team-section {
@@ -421,11 +449,13 @@ img{
 	border-radius: 0px 0px 4px 4px;
 }
 .title-card{
+	margin-bottom: 8px;
+
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
-	margin-bottom: 8px;
+	color: var(--dark);
 }
 .info-card{
 	padding: 32px 16px;
@@ -468,36 +498,28 @@ img{
 .customers-list{
 	display: flex;
 	flex-wrap: wrap;
-	gap: 24px;
-
+	justify-content: center;
+	gap: 72px 16px;
 	list-style: none;
 }
 .customer-item{
 	flex-basis: calc((100% - 120px) / 6);
 	min-width: 185px;
 }
-.customer-link{
-	display: block;
-
+.customer-img{
 	border: 1px solid var(--light-slate);
 	border-radius: 4px;
-
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.customer-link:is(:hover,:focus){
-	outline: none;
-	border: 1px solid var(--pressed-state);
-}
-.customer-img{
-	width: 104px;
-	height: 56px;
-	margin: 16px 40px;
+	width: 190px;
+	height: 88px;
+	padding: 16px 40px;
 
 	fill: var(--light-slate);
 
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link:is(:hover,:focus) .customer-img{
+	outline: none;
+	border: 1px solid var(--pressed-state);
 	fill: var(--pressed-state);
 }
 /* !============================FOOTER=================================== */
