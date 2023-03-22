@@ -12,7 +12,7 @@
 <body>
 	<header class="header">
 		<div class="container wrapper">
-			<a href="./index.html" class="logo"><span class="logo-span">Web</span >Studio</a>
+			<a href="./index.html" class="mobile-logo"><span class="logo-span">Web</span >Studio</a>
 			<button type="button" class="burger-button" data-menu-open>
 				<svg width="32" height="32" aria-label="Mobile switcher">
 					<use class="burger-icon" href="./images/icons.svg#hamburger"></use>
@@ -35,6 +35,22 @@
 				</ul>
 			</div>
 		</div >
+		<div class="container wrapper">
+			<nav class="navigation">
+				<a href="./index.html" class="logo"><span class="logo-span">Web</span >Studio</a>
+				<ul class="nav-list">
+					<li class="item"><a href="./index.html" class="nav-link current">Studio</a></li>
+					<li class="item"><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+					<li class="item"><a href="" class="nav-link">Contacts</a></li>
+				</ul>
+			</nav>
+			<address class="contact">
+				<ul class="contact-list">
+					<li class="item"><a href="mailto:info@devstudio.com" class="contact-link">info@devstudio.com</a></li>
+					<li class="item"><a href="tel:+110001111111" class="contact-link">+11 (000) 111-11-11</a></li>
+				</ul>
+			</address>
+		</div>
 	</header>
 	<main>
 		<section class="hero overlay">
@@ -48,20 +64,48 @@
 			<div class="container">
 				<ul class="advantages-list">
 					<li class="item">
+						<div class="advantages-img">
+							<svg class="advantages-icon"><use href="./images/sprite.svg#icon-antenna"></use></svg>
+						</div>
 						<h3 class="advantages-item-title">Strategy</h3>
 						<p class="text-card">Our goal is to identify the business problem to walk away with the perfect and creative solution. </p>
 					</li>
 					<li class="item">
+						<div class="advantages-img">
+							<svg class="advantages-icon"><use href="./images/sprite.svg#icon-clock"></use></svg>
+						</div>
 						<h3 class="advantages-item-title">Punctuality</h3>
 						<p class="text-card">Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
 					</li>
 					<li class="item">
+						<div class="advantages-img">
+							<svg class="advantages-icon"><use href="./images/sprite.svg#icon-diagram"></use></svg>
+						</div>
 						<h3 class="advantages-item-title">Diligence</h3>
 						<p class="text-card">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p>
 					</li>
 					<li class="item">
+						<div class="advantages-img">
+							<svg class="advantages-icon"><use href="./images/sprite.svg#icon-astronaut"></use></svg>
+						</div>
 						<h3 class="advantages-item-title">Technologies</h3>
 						<p class="text-card">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="work-section section">
+			<div class="container">
+				<h2 class="title">What are we doing</h2>
+				<ul class="work-list">
+					<li class="item">
+						<img class="work-pic" srcset="./images/monitor-360.jpg 1x, ./images/monitor@2x-720.jpg 2x" src="./images/monitor-360.jpg" alt="monitor" width="360">
+					</li>
+					<li class="item">
+						<img class="work-pic" srcset="./images/phone-360.jpg 1x, ./images/phone@2x-720.jpg 2x" src="./images/phone-360.jpg" alt="phone" width="360">
+					</li>
+					<li class="item">
+						<img class="work-pic" srcset="./images/phone-and-laptop-360.jpg 1x, ./images/phone-and-laptop@2x-720.jpg 2x" src="./images/phone-and-laptop-360.jpg" alt="phone-and-laptop" width="360">
 					</li>
 				</ul>
 			</div>

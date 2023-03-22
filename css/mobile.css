@@ -58,7 +58,13 @@ img{
 	.container{
 		width: 768px;
 	}
+	.mobile-logo{
+		display: none;
+	}
 	.mobile-menu{
+		display: none;
+	}
+	.burger-button{
 		display: none;
 	}
 	.overlay{
@@ -75,6 +81,37 @@ img{
 		line-height: 1.07;
 		margin: 0 auto 36px;
 		max-width: 496px;
+	}
+	.nav-list{
+		display: flex;
+		margin-left: 120px;
+	}
+	.nav-link {
+		font-weight: 500;
+		line-height: 1.5;
+	}
+	.nav-link.current::after{
+		position: absolute;
+		left: 0;
+		margin-top: 52px;
+
+		content: "";
+		width: 100%;
+		height: 4px;
+
+		background: var(--pressed-state);
+		border-radius: 2px;
+	}
+	.nav-list .item:not(:last-child){
+		margin-right: 40px;
+	}
+	.contact{
+		margin-left: auto;
+	}
+	.contact-link{
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.04em;
 	}
 	.advantages-list{
 		display: flex;
@@ -97,6 +134,18 @@ img{
 	.team-list>.item{
 		flex-basis: calc((100% - 72px) / 4);
 		min-width: 264px;
+	}
+	.customers-list{
+		gap: 72px 24px;
+	}
+	.customer-img{
+		width: 168px;
+		height: 88px;
+		padding: 16px 32px;
+	}
+	.customer-item{
+		flex-basis: calc((100% - 120px) / 6);
+		min-width: 160px;
 	}
 	.footer>.container{
 		width: 552px;
@@ -123,6 +172,12 @@ img{
 		margin-left: 24px;
 	}
 }
+@media screen and (min-width: 768px) and (max-width: 1199px){
+	.customers-list{
+		margin: 0 auto;
+		max-width: 552px;
+	}
+}
 @media screen and (min-width: 1200px){
 	.container{
 		width: 1158px;
@@ -142,13 +197,33 @@ img{
 			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x-856.jpg);
 		}
 	}
+	.contact-list{
+		display: flex;
+	}
+	.contact-list .item + .item{
+	margin-left: 40px;
+	}
 	.hero-title{
 		margin-bottom: 48px;
+	}
+	.advantages-list>.item{
+		min-width: 250px;
 	}
 	.advantages-item-title {
 		font-size: 20px;
 		font-weight: 500;
 		line-height: 1.2;
+	}
+	.advantages-img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 24px 10px;
+		margin-bottom: 8px;
+
+		background-color: var(--light);
+		border-radius: 4px;
 	}
 	.advertising{
 		margin: 0 120px 0 0;
@@ -165,6 +240,50 @@ img{
 			background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mobile@2x-856.jpg);
 		}
 	}
+	.logo{
+		display: none;
+	}
+	.burger-button{
+		display: inline-flex;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+	.navigation{
+		justify-content: space-between;
+	}
+	.nav-list{
+		margin-bottom: 284px;
+	}
+	.navigation>.nav-list{
+		display: none;
+	}
+	.nav-list .item:not(:last-child){
+		margin-bottom: 40px;
+	}
+	.nav-link {
+		font-weight: 700;
+		line-height: 1.11;
+	}
+	.link-tel{
+		display: block;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.11;
+		margin-bottom: 40px;
+		letter-spacing: 0.02em;
+	}
+	.link-mail{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: 0.02em;
+	}
+	.contact{
+		display: none;
+	}
 	.hero-title{
 		font-size: 36px;
 		line-height: 1.11;
@@ -178,6 +297,17 @@ img{
 	.team-list>.item:not(:last-child){
 		margin-bottom: 72px;
 	}
+	.customers-list{
+		gap: 72px 16px;
+	}
+	.customer-img{
+		width: 190px;
+		padding: 16px 40px;
+	}
+	.customer-item{
+		flex-basis: calc((100% - 80px) / 6);
+		min-width: 185px;
+	}
 	.advertising{
 		max-width: 268px;
 		margin: 0 auto 72px;
@@ -186,8 +316,8 @@ img{
 		margin: 0 auto 72px;
 		max-width: 208px;
 	}
-		.social-media>.footer-text,
-		.subscribe>.footer-text{
+	.social-media>.footer-text,
+	.subscribe>.footer-text{
 		text-align: center;
 		margin-bottom: 16px;
 	}
@@ -211,10 +341,16 @@ img{
 	.hero {
 		padding: 112px 0;
 	}
+	.advantages-img{
+		display: none;
+	}
 	.advantages-item-title{
 		font-size: 36px;
 		font-weight: 700;
 		line-height: 1.11;
+	}
+	.work-section{
+		display: none;
 	}
 }
 
@@ -222,6 +358,7 @@ img{
 	padding: 24px 0;
 	border-bottom: .5px solid var(--accent);
 }
+.mobile-logo,
 .logo {
 	font-family: Raleway, sans-serif;
 	font-size: 18px;
@@ -235,27 +372,19 @@ img{
 .logo-span{
 	color: var(--primary-brand);
 }
+/* *==============================NAV================================ */
 .navigation{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 .nav-list{
 	list-style: none;
-	margin-bottom: 284px;
-}
-.nav-list .item:not(:last-child){
-	margin-bottom: 40px;
 }
 .nav-link {
 	position: relative;
-
-	font-weight: 700;
-	line-height: 1.11;
 	letter-spacing: 0.02em;
 	color: var(--dark);
 	text-decoration: none;
-
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:is(:hover,:focus){
@@ -264,29 +393,14 @@ img{
 .current{
 	color: var(--pressed-state);
 }
-
-/* *==============================ADDRESS================================ */
 .contact-list{
 	list-style: none;
 }
 .contact-link{
 	text-decoration: none;
 	font-style: normal;
-	letter-spacing: 0.02em;
 	color: var(--text);
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link-tel{
-	display: block;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.11;
-	margin-bottom: 40px;
-}
-.link-mail{
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
 }
 .contact-link:is(:hover,:focus){
 	color: var(--pressed-state);
@@ -342,19 +456,6 @@ img{
 	justify-content: center;
 	height: 8px;
 	width: 8px;
-}
-.burger-button{
-	display: inline-flex;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-}
-@media screen and (min-width: 768px){
-	.burger-button{
-		display: none;
-	}
 }
 .burger-icon{
 	width: 32px;
@@ -429,10 +530,29 @@ img{
 	letter-spacing: 0.02em;
 	color: var(--dark);
 }
+.advantages-icon{
+	height: 64px;
+	width: 64px;
+}
 .text-card{
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+}
+/* =====================WORK SECTION=================== */
+.work-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+
+	list-style: none;
+}
+.work-list>.item{
+	flex-basis: calc((100% - 48px) / 3);
+	min-width: 290px;
+}
+.work-pic{
+	border: 1px solid var(--accent);
 }
 /* =======================TEAM SECTION================== */
 .team-section {
@@ -499,19 +619,12 @@ img{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 72px 16px;
 	list-style: none;
 }
-.customer-item{
-	flex-basis: calc((100% - 120px) / 6);
-	min-width: 185px;
-}
 .customer-img{
+	height: 88px;
 	border: 1px solid var(--light-slate);
 	border-radius: 4px;
-	width: 190px;
-	height: 88px;
-	padding: 16px 40px;
 
 	fill: var(--light-slate);
 
