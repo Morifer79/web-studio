@@ -140,7 +140,6 @@ img{
 	}
 	.customer-img{
 		width: 168px;
-		height: 88px;
 		padding: 16px 32px;
 	}
 	.customer-item{
@@ -148,7 +147,6 @@ img{
 		min-width: 160px;
 	}
 	.footer>.container{
-		width: 552px;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -176,6 +174,9 @@ img{
 	.customers-list{
 		margin: 0 auto;
 		max-width: 552px;
+	}
+	.footer>.container{
+		width: 552px;
 	}
 }
 @media screen and (min-width: 1200px){
@@ -227,6 +228,15 @@ img{
 	}
 	.advertising{
 		margin: 0 120px 0 0;
+	}
+	.subscribe{
+		margin-left: 75px;
+	}
+	.footer{
+		padding: 100px 0;
+	}
+	.nav-link.current::after{
+	margin-top: 46px;
 	}
 }
 /* !========================MAX WIDTH====================== */
@@ -283,6 +293,9 @@ img{
 	}
 	.contact{
 		display: none;
+	}
+	.mobile-menu .social-list{
+		margin-top: 48px;
 	}
 	.hero-title{
 		font-size: 36px;
@@ -721,10 +734,10 @@ img{
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 
-	max-width: 392px;
+	max-width: 408px;
 	width: 100%;
 
-	padding: 72px 16px 24px;
+	padding: 72px 24px 24px;
 }
 .button-close{
 	position: fixed;
