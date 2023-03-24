@@ -204,7 +204,7 @@ img{
 		padding: 188px 0;
 	}
 	.overlay{
-		max-width: 1600px;
+		max-width: 1440px;
 		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desktop-1440.jpg);
 	}
 	@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
