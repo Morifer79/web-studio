@@ -29,9 +29,6 @@ body{
 	color: var(--text);
 	background-color: var(--primary-clr);
 }
-body.modal-open{
-	overflow: hidden;
-}
 img{
 	display: block;
 
