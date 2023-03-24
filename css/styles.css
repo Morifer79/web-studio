@@ -147,6 +147,19 @@ img{
 		flex-basis: calc((100% - 120px) / 6);
 		min-width: 160px;
 	}
+	.filter-list {
+		justify-content: center;
+		margin-bottom: 64px;
+	}
+	.portfolio-card{
+		flex-basis: calc((100% - 48px) / 3);
+		min-width: 356px;
+	}
+	.portfolio-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 72px 24px;
+	}
 	.footer>.container{
 		display: flex;
 		flex-wrap: wrap;
@@ -175,6 +188,9 @@ img{
 	.customers-list{
 		margin: 0 auto;
 		max-width: 552px;
+	}
+	.portfolio.section{
+		padding-top: 64px;
 	}
 	.footer>.container{
 		width: 552px;
@@ -205,6 +221,11 @@ img{
 	.contact-list .item + .item{
 	margin-left: 40px;
 	}
+	.contact-link{
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.02em;
+	}
 	.hero-title{
 		margin-bottom: 48px;
 	}
@@ -226,6 +247,15 @@ img{
 
 		background-color: var(--light);
 		border-radius: 4px;
+	}
+	.portfolio.section{
+		padding-top: 100px;
+	}
+	.filter-list {
+		margin-bottom: 72px;
+	}
+	.portfolio-list{
+		gap: 48px 24px;
 	}
 	.advertising{
 		margin: 0 120px 0 0;
@@ -322,6 +352,15 @@ img{
 		flex-basis: calc((100% - 80px) / 6);
 		min-width: 185px;
 	}
+	.portfolio-card:not(:last-child){
+		margin-bottom: 48px;
+	}
+		.portfolio>.container{
+		width: 426px;
+	}
+	.portfolio.section{
+	padding: 48px 0;
+	}
 	.advertising{
 		max-width: 268px;
 		margin: 0 auto 72px;
@@ -353,14 +392,12 @@ img{
 	.button-light{
 	padding: 8px 16px;
 	}
-	.portfolio>.container{
-		width: 426px;
-	}
 }
 @media screen and (max-width: 1199px){
 	.section{
 		padding: 96px 0;
 	}
+
 	.hero {
 		padding: 112px 0;
 	}
@@ -469,6 +506,9 @@ img{
 	width: 24px;
 	border-radius: 50%;
 	fill: var(--dark);
+}
+.mobile-menu .button-close{
+	background-color: var(--accent);
 }
 .button-close:is(:hover,:focus){
 	background-color: var(--pressed-state);
@@ -666,9 +706,6 @@ img{
 
 	list-style: none;
 }
-.portfolio.section{
-	padding: 48px 0;
-}
 .button-light{
 	padding: 12px 24px;
 
@@ -685,15 +722,7 @@ img{
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border: 1px solid transparent;
 }
-.portfolio-card:not(:last-child){
-	margin-bottom: 48px;
-	/* flex-basis: calc((100% - 48px) / 3); */
-}
 .portfolio-list {
-	/* display: flex;
-	flex-wrap: wrap;
-	gap: 48px 24px; */
-
 	list-style: none;
 }
 .portfolio-link{
