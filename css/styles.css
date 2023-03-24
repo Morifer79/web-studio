@@ -391,10 +391,12 @@ img{
 	}
 }
 @media screen and (max-width: 1199px){
+	.overlay{
+	background-size: cover;
+	}
 	.section{
 		padding: 96px 0;
 	}
-
 	.hero {
 		padding: 112px 0;
 	}
@@ -526,7 +528,6 @@ img{
 .overlay{
 	margin: 0 auto;
 	background-color: var(--dark-overlay);
-	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
