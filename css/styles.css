@@ -292,14 +292,13 @@ img{
 	.navigation{
 		justify-content: space-between;
 	}
-	.nav-list{
-		margin-bottom: 284px;
-	}
 	.navigation>.nav-list{
 		display: none;
 	}
-	.nav-list .item:not(:last-child){
-		margin-bottom: 40px;
+	.nav-list{
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
 	}
 	.nav-link {
 		font-size: 36px;
@@ -311,8 +310,9 @@ img{
 		font-weight: 700;
 		font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 320px) / 550));
 		line-height: 1.11;
-		margin-bottom: 40px;
 		letter-spacing: 0.02em;
+
+		margin-bottom: 40px;
 	}
 	.link-mail{
 		font-weight: 500;
@@ -414,7 +414,6 @@ img{
 		display: none;
 	}
 }
-
 .header {
 	padding: 24px 0;
 	border-bottom: .5px solid var(--accent);
@@ -482,6 +481,9 @@ img{
 .mobile-container{
 	position: relative;
 	padding: 80px 35px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .mobile-menu.is-hidden{
 	opacity: 0;
