@@ -302,13 +302,14 @@ img{
 		margin-bottom: 40px;
 	}
 	.nav-link {
+		font-size: 36px;
 		font-weight: 700;
 		line-height: 1.11;
 	}
 	.link-tel{
 		display: block;
 		font-weight: 700;
-		font-size: 36px;
+		font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 320px) / 550));
 		line-height: 1.11;
 		margin-bottom: 40px;
 		letter-spacing: 0.02em;
@@ -352,11 +353,11 @@ img{
 	.portfolio-card:not(:last-child){
 		margin-bottom: 48px;
 	}
-		.portfolio>.container{
+	.portfolio>.container{
 		width: 426px;
 	}
 	.portfolio.section{
-	padding: 48px 0;
+		padding: 48px 0;
 	}
 	.advertising{
 		max-width: 268px;
@@ -376,7 +377,8 @@ img{
 	}
 	.subscribe-field{
 		display: block;
-		width: 398px;
+		width: 100%;
+		max-width: 398px;
 		margin: 0 auto 16px;
 	}
 	.subscribe-form>.button{
