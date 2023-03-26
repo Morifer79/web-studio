@@ -64,6 +64,10 @@ img{
 	.burger-button{
 		display: none;
 	}
+	.modal{
+		width: calc(100% - 48px);
+		padding: 24px;
+	}
 	.overlay{
 		max-width: 1200px;
 		background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet-768.jpg);
@@ -308,7 +312,7 @@ img{
 	.link-tel{
 		display: block;
 		font-weight: 700;
-		font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 320px) / 550));
+		font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 320px) / 300));
 		line-height: 1.11;
 		letter-spacing: 0.02em;
 
@@ -323,8 +327,32 @@ img{
 	.contact{
 		display: none;
 	}
+	.mobile-menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 20px;
+
+		padding: 80px 40px;
+
+		background: var(--primary-clr);
+		box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+		transform: translateX(0);
+
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
 	.mobile-menu .social-list{
 		margin-top: 48px;
+	}
+	.modal{
+		width: calc(100% - 32px);
+		padding: 16px;
 	}
 	.hero-title{
 		font-size: 36px;
@@ -389,7 +417,7 @@ img{
 		margin-bottom: 48px;
 	}
 	.button-light{
-	padding: 8px 16px;
+		padding: 8px 16px;
 	}
 }
 @media screen and (max-width: 1199px){
@@ -465,30 +493,10 @@ img{
 .contact-link:is(:hover,:focus){
 	color: var(--pressed-state);
 }
-.mobile-menu{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	max-height: 796px;
-
-	background: var(--primary-clr);
-	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mobile-container{
-	position: relative;
-	padding: 80px 35px 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
 .mobile-menu.is-hidden{
-	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transform: translateX(100%);
 }
 .button-close{
 	position: absolute;
@@ -696,9 +704,11 @@ img{
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link:is(:hover,:focus) .customer-img{
-	outline: none;
 	border: 1px solid var(--pressed-state);
 	fill: var(--pressed-state);
+}
+.customer-link{
+	outline: none;
 }
 /* *=====================================PORTFOLIO====================================================== */
 .filter-list {
@@ -860,9 +870,8 @@ img{
 	border-radius: 4px;
 
 	max-width: 408px;
-	width: 100%;
 
-	padding: 72px 24px 24px;
+	padding-top: 72px;
 }
 .button-close{
 	position: fixed;
@@ -974,7 +983,8 @@ img{
 	content: "";
 
 	margin-right: 8px;
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
 
 	width: 16px;
 	height: 16px;
@@ -1001,7 +1011,6 @@ img{
 	letter-spacing: 0.04em;
 	color: var(--light-slate);
 
-	display: flex;
 	align-items: center;
 
 	margin-bottom: 24px;
